@@ -1,4 +1,4 @@
-import { homeView } from "../views/home.html";
+import homeView from '../views/home.html';
 
 
 export default () => {
@@ -7,10 +7,10 @@ export default () => {
     divElement.classList = 'text-white';
     divElement.innerHTML = homeView;
 
-  /*   const btnClick = divElement.querySelector('#btnClick');
-    btnClick.addEventListener('fullscreenerror', () => {
+    const btnClick = divElement.querySelector('#btnClick');
+    btnClick.addEventListener('click', () => {
         alert('blablabla')
-    }) */
+    })
 
     return divElement;
 

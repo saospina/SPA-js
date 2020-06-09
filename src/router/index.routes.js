@@ -3,21 +3,19 @@ import { pages } from '../controllers/index';
 let homeContent = document.getElementById('root');
 
 
-export const router = (route) => {
+export const router = async (route) => {
     console.log(route + 'this is the location');
     homeContent.innerHTML = '';
     switch (route) {
         case '#/': {
             return homeContent.appendChild(pages.home())
         }
-
         case '#/products':
-            return homeContent.appendChild(pages.posts())
+            return console.log('This is products pages');   
         case '#/posts':
-            return homeContent.appendChild(pages.posts())
+            return homeContent.appendChild(await pages.posts())
         default:
-            console.log('error 404');
-            break;
+            return homeContent.appendChild( pages.notFound())
     }
 
 
